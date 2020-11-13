@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kinema',
       theme: AppTheme,
+      debugShowCheckedModeBanner: false,
       initialRoute: RouteGenerator.mainScreen,
       navigatorKey: RouteGenerator.key,
       onGenerateRoute: RouteGenerator.generateRoute,
