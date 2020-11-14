@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kinema/src/ui/screens/login_screen.dart';
+import 'package:kinema/src/ui/screens/register/login_screen.dart';
 import 'package:kinema/src/ui/screens/screens.dart';
 
 class RouteGenerator {

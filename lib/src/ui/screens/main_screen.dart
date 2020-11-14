@@ -1,6 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:kinema/src/routes.dart';
+import 'package:kinema/src/ui/shared/buttons/default_flatbutton.dart';
+import 'package:kinema/src/ui/shared/buttons/default_raised_button.dart';
 import 'package:kinema/src/ui/themes/colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -15,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: AppColors.colorPrimary,
       body: Stack(
@@ -37,14 +41,20 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
           Positioned(
-            top: screenHeight / 2,
+            top: screenHeight / 4,
             left: 0,
             right: 0,
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Image.asset('assets/images/movie.png'),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.asset(
+                      'assets/images/test.png',
+                      height: 100,
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -68,7 +78,9 @@ class _MainScreenState extends State<MainScreen> {
                     'Your home cinema',
                     style: TextStyle(
                       fontSize: 18,
+                      fontFamily: 'SFUIText-Light',
                       fontWeight: FontWeight.w300,
+                      color: AppColors.colorWhite,
                     ),
                   ),
                 ],
@@ -83,37 +95,15 @@ class _MainScreenState extends State<MainScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Container(
-                    width: double.infinity,
-                    height: 48,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: AppColors.colorButton,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: const Text(
-                      'Sign In',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
+                  DefaultRaisedButton(
+                    text: 'Sign In',
+                    onPressed: () {},
                   ),
                   const SizedBox(height: 16),
-                  Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: FlatButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.colorButton,
-                        ),
-                      ),
-                    ),
+                  DefaultFlatButton(
+                    onPressed: () => Navigator.of(context)
+                        ?.pushNamed(RouteGenerator.loginScreen),
+                    text: 'Login',
                   )
                 ],
               ),
