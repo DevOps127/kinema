@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kinema/src/routes.dart';
 import 'package:kinema/src/ui/shared/buttons/default_flatbutton.dart';
 import 'package:kinema/src/ui/shared/buttons/default_raised_button.dart';
 import 'package:kinema/src/ui/shared/textfield/default_textfield.dart';
@@ -57,7 +58,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(height: 40),
                             DefaultRaisedButton(
-                              onPressed: () {},
+                              onPressed: () => Navigator.of(context)
+                                  .pushNamedAndRemoveUntil(
+                                      RouteGenerator.homeScreen,
+                                      (route) => false),
                               text: 'Sign in',
                             ),
                             const SizedBox(height: 6),
@@ -93,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           color: Color(0xFF3b5998),
                                         ),
                                         const SizedBox(width: 6),
-                                        Text(
+                                        const Text(
                                           'Facebook',
                                           style: TextStyle(
                                             fontSize: 16,
@@ -119,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           color: Color(0xFFdb3236),
                                         ),
                                         const SizedBox(width: 6),
-                                        Text(
+                                        const Text(
                                           'Google',
                                           style: TextStyle(
                                             fontSize: 16,

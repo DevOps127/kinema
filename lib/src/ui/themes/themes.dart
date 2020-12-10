@@ -6,4 +6,5 @@ final ThemeData AppTheme = ThemeData(
   scaffoldBackgroundColor: AppColors.colorPrimary,
   cursorColor: AppColors.colorButton,
   visualDensity: VisualDensity.adaptivePlatformDensity,
+  primaryColor: AppColors.colorPrimary,
 );

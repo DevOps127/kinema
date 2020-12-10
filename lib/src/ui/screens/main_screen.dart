@@ -60,14 +60,14 @@ class _MainScreenState extends State<MainScreen> {
                     children: [
                       Text(
                         'Kin',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 38,
                           color: AppColors.colorWhite,
                         ),
                       ),
                       Text(
                         'ema',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 38,
                           color: AppColors.colorButton,
                         ),
@@ -76,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Text(
                     'Your home cinema',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontFamily: 'SFUIText-Light',
                       fontWeight: FontWeight.w300,
@@ -88,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ),
           Positioned(
-            bottom: 32,
+            bottom: screenHeight * 0.032,
             left: 24,
             right: 24,
             child: Center(

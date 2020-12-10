@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "990917567137",
+    "project_id": "kinema-6bdd9",
+    "storage_bucket": "kinema-6bdd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990917567137:android:bf0e4237dbb48bf3e806e0",
+        "android_client_info": {
+          "package_name": "com.example.kinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990917567137-3ptjd1ege2oj4t80d16537vh8ddjqv43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kinema",
+            "certificate_hash": "b0c88334d296001bbc43a1a4148fc570c6b4b7d9"
+          }
+        },
+        {
+          "client_id": "990917567137-t6s157vkgi40hd26snnmcpb8vujppjvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOeap7HlEHbOODy6hkXwjxny2D7zv-7Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990917567137-t6s157vkgi40hd26snnmcpb8vujppjvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
